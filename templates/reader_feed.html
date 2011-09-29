@@ -1,0 +1,25 @@
+<{includeq file='db:reader_header.html'}>
+
+<!-- Single item view -->
+
+<{if $reader_feed}>
+<div id="reader-feed-container">
+	<h2><{$reader_feed.title}></h2>
+	<div><{$reader_feed.description}></div>
+	<div>
+		<{foreach item=item from=$reader_feed.items}>
+			<div style="clear:both;"><h3><a href="<{$item.link}>"><{$item.title}></a></h3></div>
+			<div class="itemInfo"><{$item.author}> <{$item.date}></div>
+			<div><{$item.description}></div>
+		<{/foreach}>
+	</div>
+</div>
+<{/if}>
+
+<!-- Feed index view -->
+
+<{if $reader_feed_table}>
+<h2><{$reader_title}></h2>
+<{$reader_feed_table}>
+<{/if}>
+<{includeq file='db:reader_footer.html'}>

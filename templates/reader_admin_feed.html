@@ -1,0 +1,4 @@
+<{if $reader_feed_title}><h1><{$reader_feed_title}></h1><{/if}>
+<{if $reader_feed_info}><p><{$reader_feed_info}></p><{/if}>
+<{if $reader_feed_table}><{$reader_feed_table}><{/if}>
+<{if $addfeed}><{includeq file='db:system_common_form.html' form=$addfeed}><{/if}>

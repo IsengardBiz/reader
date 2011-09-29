@@ -1,0 +1,10 @@
+<div class="reader_headertable">
+	<{if $reader_module_home}>
+	<span class="reader_modulename"><{$reader_module_home}></span>
+	<{/if}>
+	<{if $reader_category_path}>
+	<span class="reader_breadcrumb"><{if $reader_module_home}>&gt;<{/if}><{$reader_category_path}></span>
+	<{/if}>
+</div>
+
+<div id="reader_submit" style="clear: both;"><{if $reader_showSubmitLink && $reader_userCanSubmit}><a href="<{$reader_url}>post.php?op=mod"><{$smarty.const._MI_READER_POST_ADD}></a><{/if}></div>
