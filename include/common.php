@@ -13,10 +13,10 @@
 defined("ICMS_ROOT_PATH") or die("ICMS root path not defined");
 
 if (!defined("READER_DIRNAME")) define("READER_DIRNAME", $modversion["dirname"] = basename(dirname(dirname(__FILE__))));
-if (!defined("READER_URL")) define("READER_URL", ICMS_URL."/modules/".READER_DIRNAME."/");
-if (!defined("READER_ROOT_PATH")) define("READER_ROOT_PATH", ICMS_ROOT_PATH."/modules/".READER_DIRNAME."/");
-if (!defined("READER_IMAGES_URL")) define("READER_IMAGES_URL", READER_URL."images/");
-if (!defined("READER_ADMIN_URL")) define("READER_ADMIN_URL", READER_URL."admin/");
+if (!defined("READER_URL")) define("READER_URL", ICMS_URL."/modules/" . READER_DIRNAME . "/");
+if (!defined("READER_ROOT_PATH")) define("READER_ROOT_PATH", ICMS_ROOT_PATH . "/modules/" . READER_DIRNAME . "/");
+if (!defined("READER_IMAGES_URL")) define("READER_IMAGES_URL", READER_URL . "images/");
+if (!defined("READER_ADMIN_URL")) define("READER_ADMIN_URL", READER_URL . "admin/");
 
 // Include the common language file of the module
 icms_loadLanguageFile("reader", "common");

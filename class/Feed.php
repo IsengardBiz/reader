@@ -25,12 +25,14 @@ class mod_reader_Feed extends icms_ipf_seo_Object {
 		$this->quickInitVar("title", XOBJ_DTYPE_TXTBOX, FALSE);
 		$this->quickInitVar("description", XOBJ_DTYPE_TXTAREA, FALSE);
 		$this->quickInitVar("identifier", XOBJ_DTYPE_TXTBOX, TRUE);
+		$this->quickInitVar("item_limit", XOBJ_DTYPE_INT, TRUE, FALSE, FALSE, 10);
 		$this->quickInitVar("online_status", XOBJ_DTYPE_INT, TRUE, FALSE, FALSE, TRUE);
-		$this->quickInitVar('weight', XOBJ_DTYPE_INT, true, false, false, 0);
+		$this->quickInitVar('weight', XOBJ_DTYPE_INT, TRUE, FALSE, FALSE, 0);
 		$this->initCommonVar("counter");
 		
 		$this->doHideFieldFromForm("title");
 		$this->doHideFieldFromForm("description");
+		$this->doHideFieldFromForm("last_update");
 		$this->doHideFieldFromForm("counter");
 		
 		$this->setControl('online_status', 'yesno');
@@ -79,7 +81,7 @@ class mod_reader_Feed extends icms_ipf_seo_Object {
 	}
 	
 	public function getWeightControl() {
-		$control = new XoopsFormText('','weight[]',5,7,$this->getVar( 'weight', 'e'));
+		$control = new icms_form_elements_Text('','weight[]',5,7,$this->getVar( 'weight', 'e'));
 		$control->setExtra('style="text-align:center;"');
 		
 		return $control->render();

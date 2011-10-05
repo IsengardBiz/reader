@@ -1,0 +1,5 @@
+<ul>
+<{foreach item=post from=$block.reader_recent_posts}>
+	<li><a href="<{$post.link}>"><{$post.title}></a><{if $post.date}> (<{$post.date}>)<{/if}></li>
+<{/foreach}>
+</ul>

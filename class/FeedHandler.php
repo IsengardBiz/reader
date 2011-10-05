@@ -19,7 +19,7 @@ class mod_reader_FeedHandler extends icms_ipf_Handler {
 	 * @param icms_db_legacy_Database $db database connection object
 	 */
 	public function __construct(&$db) {
-		parent::__construct($db, "feed", "feed_id", "identifier", "description", "reader");
+		parent::__construct($db, "feed", "feed_id", "title", "description", "reader");
 
 	}
 	
@@ -54,11 +54,11 @@ class mod_reader_FeedHandler extends icms_ipf_Handler {
 	 * @return bool 
 	 */
 
-	protected function beforeSave(& $obj) {
+	protected function beforeSave(& $obj)
+	{
+		$readerModule = icms_getModuleInfo("reader");
 		
-		/* Code from http://simplepie.org/wiki/setup/sample_page */
-
-		// Make sure SimplePie is included. You may need to change this to match the location of simplepie.inc.
+		// Make sure SimplePie is included.
 		require_once(ICMS_ROOT_PATH . '/libraries/simplepie/simplepie.inc');
 
 		// We'll process this feed with all of the default options.
@@ -66,6 +66,12 @@ class mod_reader_FeedHandler extends icms_ipf_Handler {
 
 		// Set which feed to process.
 		$feed->set_feed_url($obj->getVar('identifier', 'e'));
+		
+		// Set timeout
+		$feed->set_timeout(icms_getConfig('timeout', $readerModule->getVar("dirname")));
+		
+		// Force feed to cope with publishers who do stupid things to feeds
+		$feed->force_feed(TRUE);
 
 		// Run SimplePie.
 		$feed->init();
@@ -73,12 +79,18 @@ class mod_reader_FeedHandler extends icms_ipf_Handler {
 		// This makes sure that the content is sent to the browser as text/html and the UTF-8 character set (since we didn't change it).
 		$feed->handle_content_type();
 		
-		$obj->setVar('title', $feed->get_title());
-		$obj->setVar('description', $feed->get_description());
-
-		/* end code from Simplepie */
-		
-		return TRUE;
+		// Handle errors here
+		if ($feed->error())
+		{
+			$obj->setErrors($feed->error());
+			return FALSE;
+		}
+		else
+		{
+			$obj->setVar('title', $feed->get_title());
+			$obj->setVar('description', $feed->get_description());
+			return TRUE;
+		}
 	}
 
 }

@@ -3,6 +3,19 @@
 .reader_breadcrumb {font-size: 0.8em; line-height: 18px;}
 .reader_adminlinks {padding-top: 15px; padding-bottom: 5px; font-size: 0.8em; text-align: center; line-height: 18px;}
 
-.reader_post_container {
-	margin-bottom: 35px;
+.reader_feed_container {
+	clear:both;
+}
+
+/* Spaces sections of the page*/
+.reader_separator {
+	font-size:0.8em;
+	margin-bottom:1em;
+}
+
+/* Floats a feed image to the left*/
+.reader_float_left {
+	float:left;
+	clear:both;
+	margin:0em 1em 1em 0em;
 }

@@ -40,28 +40,6 @@ function icms_module_update_reader($module) {
     return TRUE;
 }
 
-function icms_module_install_reader($module) {
-	
-	// create a directory to cache feeds
-	$path = ICMS_ROOT_PATH . '/cache/' . basename(dirname(dirname(__FILE__)));
-	$directory_exists = $file_exists = $writeable = true;
-
-	// check if directory exists, make one if not, and write an empty index file
-	if (!is_dir($path)) {
-		$directory_exists = mkdir($path, 0777);
-		$path .= '/index.html';
-		
-		// add an index file to prevent directory traversals
-		if (!is_file($path)) {
-			$filename = $path;	
-			$contents = '<script>history.go(-1);</script>';
-			$handle = fopen($filename, 'wb');
-			$result = fwrite($handle, $contents);
-			echo 'result is: ' . $result;
-			fclose($handle);
-			chmod($path, 0644);
-		}
-	}
-	
+function icms_module_install_reader($module) {	
 	return TRUE;
 }

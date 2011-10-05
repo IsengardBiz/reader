@@ -116,7 +116,8 @@ if (in_array($clean_op, $valid_op, TRUE)) {
 			$objectTable->addColumn(new icms_ipf_view_Column("online_status"));
 			$objectTable->addColumn(new icms_ipf_view_Column("title"));
 			$objectTable->addColumn(new icms_ipf_view_Column("description"));
-			$objectTable->addColumn(new IcmsPersistableColumn('weight', 'center', true,
+			$objectTable->addColumn(new icms_ipf_view_Column("item_limit"));
+			$objectTable->addColumn(new icms_ipf_view_Column('weight', 'center', true,
 			'getWeightControl'));
 			$objectTable->addIntroButton("addfeed", "feed.php?op=mod", _AM_READER_FEED_CREATE);
 			$objectTable->addActionButton('changeWeight', false, _SUBMIT);

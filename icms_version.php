@@ -82,14 +82,102 @@ $modversion['templates'] = array(
 	array("file" => "reader_requirements.html", "description" => "Module requirements"));
 
 /** Blocks information */
-// Feed list
-// Recent items (for one feed / combined)
+$modversion['blocks'][1] = array(
+	'file' => 'feed_recent.php',
+	'name' => _MI_READER_FEEDRECENT,
+	'description' => _MI_READER_FEEDRECENT_DSC,
+	'show_func' => 'reader_feed_recent_show',
+	'edit_func' => 'reader_feed_recent_edit',
+	'options' => '5',
+	'template' => 'reader_feed_recent.html');
+
+$modversion['blocks'][] = array(
+	'file' => 'feed_recent_posts.php',
+	'name' => _MI_READER_FEED_RECENT_POSTS,
+	'description' => _MI_READER_FEED_RECENT_POSTS_DSC,
+	'show_func' => 'reader_feed_recent_posts_show',
+	'edit_func' => 'reader_feed_recent_posts_edit',
+	'options' => '0|5',
+	'template' => 'reader_feed_recent_posts.html');
 
 /** Preferences information */
+
+$modversion['config'][1] = array(
+	'name' => 'show_breadcrumb',
+	'title' => '_MI_READER_SHOW_BREADCRUMB',
+	'description' => '_MI_READER_SHOW_BREADCRUMB_DSC',
+	'formtype' => 'yesno',
+	'valuetype' => 'int',
+	'default' => '1');
+
 $modversion['config'][] = array(
-	'name' => 'default_items',
-	'title' => '_MI_READER_DEFAULT_ITEMS',
-	'description' => '_MI_READER_DEFAULT_ITEMSDSC',
+	'name' => 'show_feed_logos',
+	'title' => '_MI_READER_SHOW_FEED_LOGOS',
+	'description' => '_MI_READER_SHOW_FEED_LOGOS_DSC',
+	'formtype' => 'yesno',
+	'valuetype' => 'int',
+	'default' => '1');
+
+/*$modversion['config'][] = array(
+	'name' => 'show_feed_select_box',
+	'title' => '_MI_READER_SHOW_FEED_SELECT_BOX',
+	'description' => '_MI_READER_SHOW_FEED_SELECT_BOX_DSC',
+	'formtype' => 'yesno',
+	'valuetype' => 'int',
+	'default' => '1');*/
+
+$modversion['config'][] = array(
+	'name' => 'number_of_feeds_per_page',
+	'title' => '_MI_READER_NUMBER_FEEDS_PER_PAGE',
+	'description' => '_MI_READER_NUMBER_FEEDS_PER_PAGE_DSC',
 	'formtype' => 'textbox',
 	'valuetype' => 'int',
-	'default' =>  '10');
+	'default' =>  '5');
+
+$modversion['config'][] = array(
+	'name' => 'timeout',
+	'title' => '_MI_READER_TIMEOUT',
+	'description' => '_MI_READER_TIMEOUT_DSC',
+	'formtype' => 'textbox',
+	'valuetype' => 'int',
+	'default' =>  '20');
+
+$modversion['config'][] = array(
+	'name' => 'enable_cache',
+	'title' => '_MI_READER_ENABLE_CACHE',
+	'description' => '_MI_READER_ENABLE_CACHE_DSC',
+	'formtype' => 'yesno',
+	'valuetype' => 'int',
+	'default' =>  '1');
+
+$modversion['config'][] = array(
+	'name' => 'cache_duration',
+	'title' => '_MI_READER_CACHE_DURATION',
+	'description' => '_MI_READER_CACHE_DURATION_DSC',
+	'formtype' => 'textbox',
+	'valuetype' => 'int',
+	'default' =>  '3600');
+
+$modversion['config'][] = array(
+	'name' => 'image_width',
+	'title' => '_MI_READER_LOGO_WIDTH',
+	'description' => '_MI_READER_LOGO_WIDTH_DSC',
+	'formtype' => 'textbox',
+	'valuetype' => 'int',
+	'default' =>  '100');
+
+$modversion['config'][] = array(
+	'name' => 'date_format',
+	'title' => '_MI_READER_DATE_FORMAT',
+	'description' => '_MI_READER_DATE_FORMAT_DSC',
+	'formtype' => 'textbox',
+	'valuetype' => 'text',
+	'default' =>  'j/n/Y');
+
+$modversion['config'][] = array(
+	'name' => 'display_select_box',
+	'title' => '_MI_READER_DISPLAY_SELECT_BOX',
+	'description' => '_MI_READER_DISPLAY_SELECT_BOX_DSC',
+	'formtype' => 'yesno',
+	'valuetype' => 'int',
+	'default' =>  '1');
