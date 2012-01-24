@@ -87,7 +87,14 @@ class mod_reader_FeedHandler extends icms_ipf_Handler {
 		}
 		else
 		{
-			$obj->setVar('title', $feed->get_title());
+			// The feed title can be set automatically by leaving the field blank. However, some 
+			// publishers prepend titles with useless marketing crap. Therefore the admin can 
+			// choose to enter or edit the feed title manually.
+			$title = trim($obj->getVar('title', 'e'));
+			if (empty($title))
+			{
+				$obj->setVar('title', $feed->get_title());
+			}
 			$obj->setVar('description', $feed->get_description());
 			return TRUE;
 		}

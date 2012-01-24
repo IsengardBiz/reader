@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Shows a list of the latest posts in a news feed
+ * Shows a list of the latest posts in a selected newsfeed (or all feeds).
  *
  * @copyright	http://smartfactory.ca The SmartFactory
  * @license		http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)

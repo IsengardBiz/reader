@@ -16,7 +16,7 @@ defined("ICMS_ROOT_PATH") or die("ICMS root path not defined");
 define("_CO_READER_FEED_DESCRIPTION", "Description");
 define("_CO_READER_FEED_DESCRIPTION_DSC", "Summary description of this feed.");
 define("_CO_READER_FEED_TITLE", "Title");
-define("_CO_READER_FEED_TITLE_DSC", "Name of this feed.");
+define("_CO_READER_FEED_TITLE_DSC", "Leave this field empty to have it auto-filled from the feed data (recommended). However, you can enter it manually or edit it if the publisher has inserted unwanted marketing slogans.");
 define("_CO_READER_FEED_IDENTIFIER", "Feed URL");
 define("_CO_READER_FEED_IDENTIFIER_DSC", "Enter the target URL of the RSS feed to which you wish to subscribe.");
 define("_CO_READER_FEED_ITEM_LIMIT", "Item limit");

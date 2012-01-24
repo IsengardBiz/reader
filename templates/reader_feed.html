@@ -10,7 +10,7 @@
 <div class="reader-feed-container">
 	
 	<{if $reader_feed.image_url}>
-		<div class="reader_float_left">
+		<div class="<{$reader_logo_position}>">
 			<a href="<{$reader_feed.permalink}>">
 				<img width="<{$reader_feed.image_width}>" src="<{$reader_feed.image_url}>" 
 					 alt="<{$reader_feed.title}>" title="<{$reader_feed.image_title}>" />
@@ -47,7 +47,7 @@
 	<{foreach item=feed from=$reader_feeds}>
 		<div class="reader_feed_container">
 			<{if $feed.image_url}>
-				<div class="reader_float_left">
+				<div class="<{$reader_logo_position}>">
 					<a href="<{$feed.itemUrl}>">
 						<img width="<{$feed.image_width}>" src="<{$feed.image_url}>" alt="<{$feed.title}>" title="<{$feed.image_title}>" />
 					</a>

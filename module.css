@@ -19,3 +19,10 @@
 	clear:both;
 	margin:0em 1em 1em 0em;
 }
+
+/* Floats a feed image to the left*/
+.reader_float_right {
+	float:right;
+	clear:both;
+	margin:0em 0em 1em 1em;
+}

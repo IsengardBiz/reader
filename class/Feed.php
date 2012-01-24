@@ -22,22 +22,20 @@ class mod_reader_Feed extends icms_ipf_seo_Object {
 		icms_ipf_object::__construct($handler);
 
 		$this->quickInitVar("feed_id", XOBJ_DTYPE_INT, TRUE);
+		$this->quickInitVar("identifier", XOBJ_DTYPE_TXTBOX, TRUE);
 		$this->quickInitVar("title", XOBJ_DTYPE_TXTBOX, FALSE);
 		$this->quickInitVar("description", XOBJ_DTYPE_TXTAREA, FALSE);
-		$this->quickInitVar("identifier", XOBJ_DTYPE_TXTBOX, TRUE);
 		$this->quickInitVar("item_limit", XOBJ_DTYPE_INT, TRUE, FALSE, FALSE, 10);
 		$this->quickInitVar("online_status", XOBJ_DTYPE_INT, TRUE, FALSE, FALSE, TRUE);
 		$this->quickInitVar('weight', XOBJ_DTYPE_INT, TRUE, FALSE, FALSE, 0);
 		$this->initCommonVar("counter");
 		
-		$this->doHideFieldFromForm("title");
+		// Hide fields that should not be tinkered with
 		$this->doHideFieldFromForm("description");
 		$this->doHideFieldFromForm("last_update");
 		$this->doHideFieldFromForm("counter");
 		
 		$this->setControl('online_status', 'yesno');
-
-		//$this->initiateSEO();
 	}
 
 	/**

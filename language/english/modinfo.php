@@ -28,6 +28,8 @@ define("_MI_READER_SHOW_BREADCRUMB", "Show breadcrumb?");
 define("_MI_READER_SHOW_BREADCRUMB_DSC", "Display the horizontal navigation breadcrumb?");
 define("_MI_READER_SHOW_FEED_LOGOS", "Show feed logos?");
 define("_MI_READER_SHOW_FEED_LOGOS_DSC", "Toggle feed logos on or off");
+define("_MI_READER_LOGO_POSITION", "Logo position");
+define("_MI_READER_LOGO_POSITION_DSC", "Display feed logos on the left or right side of the page.");
 define("_MI_READER_NUMBER_FEEDS_PER_PAGE", "Number of feeds to display on a page");
 define("_MI_READER_NUMBER_FEEDS_PER_PAGE_DSC", "Controls how many feeds are displayed on the module 
 	index page. Pagination controls will be inserted when this limit is exceeded.");
@@ -36,7 +38,8 @@ define("_MI_READER_TIMEOUT_DSC", "The length of time Reader will wait for a feed
 	giving up.");
 define("_MI_READER_ENABLE_CACHE", "Enable cache?");
 define("_MI_READER_ENABLE_CACHE_DSC", "Caching accelerates page load time by storing the results for 
-	a period specified below.");
+	a period specified below. Strongly recommend to enable, otherwise you will see considerably 
+	slower load times while the feed is retrieved and parsed.");
 define("_MI_READER_CACHE_DURATION", "Cache duration (seconds)");
 define("_MI_READER_CACHE_DURATION_DSC", "The time (in seconds) that cached feeds will be stored 
 	locally before being refreshed.");
@@ -49,3 +52,7 @@ define("_MI_READER_DATE_FORMAT_DSC", "Specify the format as per the
 define("_MI_READER_DISPLAY_SELECT_BOX", "Display navigation select box?");
 define("_MI_READER_DISPLAY_SELECT_BOX_DSC", "In single feed view, you can choose to display a 
 	select box that will allow visitors to jump between feeds.");
+
+// Preference options
+define("_MI_READER_LEFT", "Left");
+define("_MI_READER_RIGHT", "Right");

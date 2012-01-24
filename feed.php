@@ -223,6 +223,16 @@ if($feedObj && !$feedObj->isNew()) {
 	$icmsTpl->assign('reader_navbar', $pagenav->renderNav());
 }
 
+	// Set feed logo position
+	if (icms::$module->config['logo_position'] == 0)
+	{
+		$icmsTpl->assign('reader_logo_position', 'reader_float_left');
+	}
+	else
+	{
+		$icmsTpl->assign('reader_logo_position', 'reader_float_right');
+}
+
 $icmsTpl->assign("reader_module_home", '<a href="' . ICMS_URL . "/modules/" . icms::$module->getVar("dirname") . '/">' . icms::$module->getVar("name") . "</a>");
 
 include_once "footer.php";

@@ -116,15 +116,16 @@ $modversion['config'][] = array(
 	'description' => '_MI_READER_SHOW_FEED_LOGOS_DSC',
 	'formtype' => 'yesno',
 	'valuetype' => 'int',
-	'default' => '1');
+	'default' => '0');
 
-/*$modversion['config'][] = array(
-	'name' => 'show_feed_select_box',
-	'title' => '_MI_READER_SHOW_FEED_SELECT_BOX',
-	'description' => '_MI_READER_SHOW_FEED_SELECT_BOX_DSC',
-	'formtype' => 'yesno',
+$modversion['config'][] = array(
+	'name' => 'logo_position',
+	'title' => '_MI_READER_LOGO_POSITION',
+	'description' => '_MI_READER_LOGO_POSITION_DSC',
+	'formtype' => 'select',
 	'valuetype' => 'int',
-	'default' => '1');*/
+	'options' => array('_MI_READER_LEFT' => 0, '_MI_READER_RIGHT' => 1),
+	'default' => '1');
 
 $modversion['config'][] = array(
 	'name' => 'number_of_feeds_per_page',
@@ -156,7 +157,7 @@ $modversion['config'][] = array(
 	'description' => '_MI_READER_CACHE_DURATION_DSC',
 	'formtype' => 'textbox',
 	'valuetype' => 'int',
-	'default' =>  '3600');
+	'default' =>  '86400');
 
 $modversion['config'][] = array(
 	'name' => 'image_width',
