@@ -153,13 +153,34 @@ if($feedObj && !$feedObj->isNew()) {
 	
 	$icmsTpl->assign("reader_title", _MD_READER_ALL_FEEDS);
 	
-	// Retrieve a list of feeds
+	// Retrieve a list of feeds + count the total number of feeds
 	$criteria = icms_buildCriteria(array('online_status' => '1'));
+	$feedCount = $reader_feed_handler->getCount($criteria);
 	$criteria->setStart($clean_start);
 	$criteria->setLimit(icms::$module->config['number_of_feeds_per_page']);
 	$criteria->setSort('weight');
 	$criteria->setOrder('ASC');
 	$feed_array = $reader_feed_handler->getObjects($criteria, FALSE, FALSE);
+	
+	// Display feed navigation select box *if* the number of feeds exceeds the pagination limit
+	if (icms::$module->config["display_select_box"] && $feedCount > icms::$module->config['number_of_feeds_per_page'])
+	{
+		// Create select box options
+		$criteria = icms_buildCriteria(array("online_status" => "1"));
+		$feed_select_options = array(0 => _CO_READER_SELECT_FEED) + $reader_feed_handler->getList($criteria);
+
+		// Build feed select box
+		$form = '<div><form name="feed_selection_form" action="feed.php" method="get">';
+		$form .= '<select name="feed_id" id="feed_id" onchange="this.form.submit()">';
+		foreach ($feed_select_options as $key => $value)
+		{
+			$form .= '<option value="' . $key . '">' . $value . '</option>';
+		}
+		$form .= '</select></form></div>';
+		
+		// Assign select box to template
+		$icmsTpl->assign('reader_feed_select_box', $form);
+	}
 	
 	// Configure feeds
 	foreach ($feed_array as & $myfeed)

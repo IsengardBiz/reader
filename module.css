@@ -26,3 +26,8 @@
 	clear:both;
 	margin:0em 0em 1em 1em;
 }
+
+/* Ensure an element does not overlap an image */
+.reader_clear_both {
+	clear:both;
+}
