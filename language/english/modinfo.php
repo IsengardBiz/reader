@@ -16,6 +16,7 @@ define("_MI_READER_MD_NAME", "Reader");
 define("_MI_READER_MD_DESC", "ImpressCMS Simple Reader");
 define("_MI_READER_FEEDS", "Feeds");
 define("_MI_READER_TEMPLATES", "Templates");
+define("_MI_READER_MANUAL", "Manual");
 
 // Blocks
 define("_MI_READER_FEEDRECENT", "Newsfeeds");
