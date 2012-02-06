@@ -34,10 +34,9 @@ $modversion = array(
 
 /**  Development information */
 	"status_version"			=> "1.0",
-	"status"					=> "Beta",
-	"date"						=> "Unreleased",
-	"author_word"				=> "For ImpressCMS 1.3+ only.",
-	"warning"					=> _CO_ICMS_WARNING_BETA,
+	"status"					=> "Final",
+	"date"						=> "6/2/2012",
+	"author_word"				=> "For ImpressCMS 1.3+ and 2 series only.",
 
 /** Contributors */
 	"developer_website_url"		=> "https://www.isengard.biz",
