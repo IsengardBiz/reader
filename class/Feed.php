@@ -67,13 +67,13 @@ class mod_reader_Feed extends icms_ipf_seo_Object {
 				. '/admin/feed.php?feed_id=' . $this->getVar('feed_id')
 				. '&amp;op=changeStatus">';
 		if ($status == false) {
-			$button .= '<img src="../images/button_cancel.png" alt="' . _CO_READER_FEED_ONLINE 
-				. '" title="' . _CO_READER_FEED_SWITCH_ONLINE . '" /></a>';
+			$button .= '<img src="' . ICMS_IMAGES_SET_URL . '/actions/button_cancel.png"' 
+				. _CO_READER_FEED_OFFLINE . '" title="' . _CO_READER_FEED_SWITCH_ONLINE . '" /></a>';
 			
 		} else {
 			
-			$button .= '<img src="../images/button_ok.png" alt="' . _CO_READER_FEED_OFFLINE
-				. '" title="' . _CO_READER_FEED_SWITCH_OFFLINE . '" /></a>';
+			$button .= '<img src="' . ICMS_IMAGES_SET_URL . '/actions/button_ok.png"'
+				. _CO_READER_FEED_ONLINE . '" title="' . _CO_READER_FEED_SWITCH_ONLINE . '" /></a>';
 		}
 		return $button;
 	}
