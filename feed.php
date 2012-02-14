@@ -128,7 +128,6 @@ if($feedObj && !$feedObj->isNew()) {
 						
 						default:
 							$itemArray['enclosure_image'] = READER_IMAGES_URL . 'download.png';
-						
 					}
 				}
 			}
@@ -140,9 +139,6 @@ if($feedObj && !$feedObj->isNew()) {
 		$icmsTpl->assign("reader_feed", $feedArray);
 		$icmsTpl->assign("reader_show_breadcrumb", icms::$module->config['show_breadcrumb']);
 		$icmsTpl->assign('reader_category_path', ' ' . $feedArray['title']);
-
-		//$icms_metagen = new icms_ipf_Metagen($feedObj->getVar("identifier"), $feedObj->getVar("meta_keywords", "n"), $feedObj->getVar("meta_description", "n"));
-		//$icms_metagen->createMetaTags();
 	}
 	
 } else {
@@ -252,7 +248,7 @@ if($feedObj && !$feedObj->isNew()) {
 	else
 	{
 		$icmsTpl->assign('reader_logo_position', 'reader_float_right');
-}
+	}
 
 $icmsTpl->assign("reader_module_home", '<a href="' . ICMS_URL . "/modules/" . icms::$module->getVar("dirname") . '/">' . icms::$module->getVar("name") . "</a>");
 
