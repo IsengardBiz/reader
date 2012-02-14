@@ -12,5 +12,7 @@
  * @version		$Id$
  */
 
+include_once "../../mainfile.php";
+include_once ICMS_ROOT_PATH . "/header.php";
 header('location: feed.php');
 exit();
