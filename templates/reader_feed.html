@@ -18,10 +18,10 @@
 		</div>
 	<{/if}>
 	
-	<h1><a href="<{$reader_feed.subscribe_feed}>"><img src="<{$smarty.const.READER_IMAGES_URL}>rss.png" alt="RSS" title="<{$smarty.const._CO_READER_SUBSCRIBE_TO}><{$reader_feed.title}>" /></a> <{$reader_feed.title}></h1>
+	<h2><a href="<{$reader_feed.subscribe_feed}>"><img src="<{$smarty.const.READER_IMAGES_URL}>rss.png" alt="RSS" title="<{$smarty.const._CO_READER_SUBSCRIBE_TO}><{$reader_feed.title}>" /></a> <{$reader_feed.title}></h2>
 	<div><{$reader_feed.description}></div>
 	<div class="reader_feed_container">
-		<h2><{$smarty.const._CO_READER_LATEST_POSTS}></h2>
+		<h3><{$smarty.const._CO_READER_LATEST_POSTS}></h3>
 		<{foreach item=item from=$reader_feed.items}>
 			<h3><a href="<{$item.link}>"><{$item.title}></a></h3>
 			<div class="reader_separator">
@@ -39,7 +39,6 @@
 
 <{if $reader_feeds}>
 
-	<h1><{$smarty.const._CO_READER_NEWSFEEDS}></h1>
 	<{if $reader_navbar}>
 		<div><{$reader_navbar}></div>
 	<{/if}>

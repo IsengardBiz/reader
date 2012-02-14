@@ -34,5 +34,5 @@ define("_CO_READER_FEED_SWITCH_ONLINE", "Toggle this feed online");
 define("_CO_READER_LATEST_POSTS", "Latest posts");
 define("_CO_READER_NEWSFEEDS", "Newsfeeds");
 define("_CO_READER_SUBSCRIBE_TO", "Subscribe to ");
-define("_CO_READER_SELECT_FEED", "Select feed");
+define("_CO_READER_SELECT_FEED", "-- Select feed --");
 define("_CO_READER_PUBLISHED_ON", "Published on ");
