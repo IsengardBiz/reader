@@ -226,6 +226,7 @@ if($feedObj && !$feedObj->isNew()) {
 			}
 			$myfeed['image_title'] = $feed->get_image_title();
 			$myfeed['image_width'] = icms::$module->config['image_width'];
+			$feedArray['subscribe_feed'] = urldecode($feed->subscribe_feed());
 			unset($feed, $author, $item);		
 		}
 	}
