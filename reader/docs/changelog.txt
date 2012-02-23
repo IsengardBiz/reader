@@ -1,0 +1,9 @@
+Unreleased: Version 1.0 Beta
+============================
+
+- First public release of the module.
+
+Version 1.0
+===========
+
+- Released 6/2/2012, for ImpressCMS V1.3.x and V2. Not compatible with V1.2.x.
