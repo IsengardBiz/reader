@@ -33,9 +33,9 @@ $modversion = array(
 	"image"						=> "images/icon_big.png", /* for backward compatibility */
 
 /**  Development information */
-	"status_version"			=> "1.0.1",
-	"status"					=> "Final",
-	"date"						=> "15/2/2012",
+	"status_version"			=> "1.0.2",
+	"status"					=> "Beta",
+	"date"						=> "22/3/2012",
 	"author_word"				=> "For ImpressCMS 1.3+ and 2 series only.",
 
 /** Contributors */
@@ -173,6 +173,14 @@ $modversion['config'][] = array(
 	'formtype' => 'textbox',
 	'valuetype' => 'text',
 	'default' =>  'j/n/Y');
+
+$modversion['config'][] = array(
+	'name' => 'display_feed_description',
+	'title' => '_MI_READER_DISPLAY_FEED_DESCRIPTION',
+	'description' => '_MI_READER_DISPLAY_FEED_DESCRIPTION_DSC',
+	'formtype' => 'yesno',
+	'valuetype' => 'int',
+	'default' =>  '1');
 
 $modversion['config'][] = array(
 	'name' => 'display_select_box',

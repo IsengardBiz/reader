@@ -19,11 +19,13 @@
 	<{/if}>
 	
 	<h2><a href="<{$reader_feed.subscribe_feed}>"><img src="<{$smarty.const.READER_IMAGES_URL}>rss.png" alt="RSS" title="<{$smarty.const._CO_READER_SUBSCRIBE_TO}><{$reader_feed.title}>" /></a> <{$reader_feed.title}></h2>
-	<div><{$reader_feed.description}></div>
+	<{if $reader_feed.description}>
+		<div><{$reader_feed.description}></div>
+	<{/if}>
 	<div class="reader_feed_container">
 		<h3><{$smarty.const._CO_READER_LATEST_POSTS}></h3>
 		<{foreach item=item from=$reader_feed.items}>
-			<h3><a href="<{$item.link}>"><{$item.title}></a></h3>
+			<h4><a href="<{$item.link}>"><{$item.title}></a></h4>
 			<div class="reader_separator">
 				<{if $item.author}><{$item.author}><{/if}><{if $item.date}> <{$smarty.const._CO_READER_PUBLISHED_ON}><{$item.date}><{/if}>
 				<{if $item.enclosure_link}>
@@ -54,7 +56,7 @@
 			<{/if}>
 			<h2><a href="<{$feed.subscribe_feed}>"><img src="<{$smarty.const.READER_IMAGES_URL}>rss.png" alt="RSS" title="<{$smarty.const._CO_READER_SUBSCRIBE_TO}><{$feed.title}>" /></a> <a href="<{$feed.itemUrl}>"><{$feed.title}></a></h2>
 			<{if $feed.author || $feed.date}>
-			<div class="reader_separator"><{if $feed.author}><{$feed.author}><{/if}><{if $feed.author && $feed.date}> | <{/if}><{if $feed.date}><{$feed.date}><{/if}>
+			<div class="reader_separator"><{if $feed.author}><{$feed.author}><{/if}><{if $feed.author && $feed.date}> | <{/if}><{if $feed.date}><{$smarty.const._CO_READER_FEED_LAST_UPDATE}> <{$feed.date}><{/if}>
 			</div>
 			<{/if}>
 			<{if $feed.description}>

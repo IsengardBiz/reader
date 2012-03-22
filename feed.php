@@ -91,8 +91,18 @@ if($feedObj && !$feedObj->isNew()) {
 	
 		// Populate the feed
 		$feedArray = $feedObj->toArray();
-		$feedArray['title'] = $feed->get_title();
-		$feedArray['description'] = $feed->get_description();
+		if (empty($feedArray['title']))
+		{
+			$feedArray['title'] = $feed->get_title();
+		}
+		if (icms::$module->config['display_feed_description'])
+		{
+			$feedArray['description'] = $feed->get_description();
+		}
+		else
+		{
+			unset($feedArray['description']);
+		}
 		if (icms::$module->config['show_feed_logos'])
 		{
 			$feedArray['image_url'] = urldecode($feed->get_image_url());
@@ -208,13 +218,23 @@ if($feedObj && !$feedObj->isNew()) {
 		else
 		{
 			// Populate feed
-			$myfeed['title'] = $feed->get_title();
+			if (empty($myfeed['title']))
+			{
+				$myfeed['title'] = $feed->get_title();
+			}
+			if (icms::$module->config['display_feed_description'])
+			{
+				$myfeed['description'] = $feed->get_description();
+			}
+			else
+			{
+				unset($myfeed['description']);
+			}
 			$author = $feed->get_author();
 			if (is_object($author))
 			{
 				$myfeed['author'] = $author->get_name();
 			}
-			$myfeed['description'] = $feed->get_description();
 			$item = $feed->get_item(0);
 			if(!empty($item))
 			{

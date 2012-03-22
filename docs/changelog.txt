@@ -7,3 +7,16 @@ Version 1.0
 ===========
 
 - Released 6/2/2012, for ImpressCMS V1.3.x and V2. Not compatible with V1.2.x.
+
+Version 1.01
+============
+
+- Miscellaneous minor bugfixes.
+
+Version 1.02
+============
+
+- Released 22/3/2012
+- Pull feed titles from database in preference to cache to allow customisation.
+- Add preference to toggle feed descriptions on and off.
+- Adjust heading levels in single feed view.

@@ -50,6 +50,10 @@ define("_MI_READER_LOGO_WIDTH_DSC", "The width at which feed logos will be displ
 define("_MI_READER_DATE_FORMAT", "Date format");
 define("_MI_READER_DATE_FORMAT_DSC", "Specify the format as per the
 	<a href='http://php.net/manual/en/function.date.php'>date() function</a> in the PHP Manual.");
+define("_MI_READER_DISPLAY_FEED_DESCRIPTION", "Display feed description?");
+define("_MI_READER_DISPLAY_FEED_DESCRIPTION_DSC", "Sometimes publishers provide useless or spam-laden 
+	feed descriptions. If the marketing department appears to be out of control, you can turn them off
+	here.");
 define("_MI_READER_DISPLAY_SELECT_BOX", "Display navigation select box?");
 define("_MI_READER_DISPLAY_SELECT_BOX_DSC", "In single feed view, you can choose to display a 
 	select box that will allow visitors to jump between feeds.");
