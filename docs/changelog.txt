@@ -16,7 +16,7 @@ Version 1.01
 Version 1.02
 ============
 
-- Released 22/3/2012
+- Released 25/5/2012
 - Pull feed titles from database in preference to cache to allow customisation.
 - Add preference to toggle feed descriptions on and off.
 - Adjust heading levels in single feed view.
