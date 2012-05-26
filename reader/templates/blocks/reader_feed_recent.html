@@ -1,0 +1,5 @@
+<ul>
+<{foreach item=feed from=$block.reader_feedlist}>
+	<li><a href="<{$block.reader_base_url}><{$feed.feed_id}>"><{$feed.title}></a></li>
+<{/foreach}>
+</ul>

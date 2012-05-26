@@ -1,0 +1,33 @@
+.reader_headertable {padding: 0; margin: 0; border-bottom: 1px solid; margin-bottom: 10px;}
+.reader_modulename {font-size: 0.8em; text-align: left; font-weight: bold; padding-right: 0.3em;	line-height: 18px;}
+.reader_breadcrumb {font-size: 0.8em; line-height: 18px;}
+.reader_adminlinks {padding-top: 15px; padding-bottom: 5px; font-size: 0.8em; text-align: center; line-height: 18px;}
+
+.reader_feed_container {
+	clear:both;
+}
+
+/* Spaces sections of the page*/
+.reader_separator {
+	font-size:0.8em;
+	margin-bottom:1em;
+}
+
+/* Floats a feed image to the left*/
+.reader_float_left {
+	float:left;
+	clear:both;
+	margin:0em 1em 1em 0em;
+}
+
+/* Floats a feed image to the left*/
+.reader_float_right {
+	float:right;
+	clear:both;
+	margin:0em 0em 1em 1em;
+}
+
+/* Ensure an element does not overlap an image */
+.reader_clear_both {
+	clear:both;
+}

@@ -1,0 +1,27 @@
+Unreleased: Version 1.0 Beta
+============================
+
+- First public release of the module.
+
+Version 1.0
+===========
+
+- Released 6/2/2012, for ImpressCMS V1.3.x and V2. Not compatible with V1.2.x.
+
+Version 1.01
+============
+
+- Miscellaneous minor bugfixes.
+
+Version 1.02
+============
+
+- Released 25/5/2012
+- Pull feed titles from database in preference to cache to allow customisation.
+- Add preference to toggle feed descriptions on and off.
+- Adjust heading levels in single feed view.
+
+Version 1.03
+============
+- Released 26/5/2012
+- Add feed title to feed_recent_posts block (Will).
