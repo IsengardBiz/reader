@@ -17,10 +17,10 @@ defined("ICMS_ROOT_PATH") or die("ICMS root path not defined");
 /**  General Information  */
 $modversion = array(
 	"name"						=> _MI_READER_MD_NAME,
-	"version"					=> "1.02",
+	"version"					=> "1.03",
 	"description"				=> _MI_READER_MD_DESC,
 	"author"					=> "Madfish (Simon Wilkinson)",
-	"credits"					=> "Feeds are handled using Simplepie",
+	"credits"					=> "Feeds are handled using the Simplepie Library. Other contributors: Will",
 	"help"						=> "",
 	"license"					=> "GNU General Public License (GPL)",
 	"official"					=> 0,
@@ -33,9 +33,9 @@ $modversion = array(
 	"image"						=> "images/icon_big.png", /* for backward compatibility */
 
 /**  Development information */
-	"status_version"			=> "1.02",
+	"status_version"			=> "1.03",
 	"status"					=> "Final",
-	"date"						=> "25/5/2012",
+	"date"						=> "26/5/2012",
 	"author_word"				=> "For ImpressCMS 1.3+ and 2 series only.",
 
 /** Contributors */

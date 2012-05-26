@@ -59,8 +59,10 @@ function reader_feed_recent_posts_show($options)
 	// Retrieve the last X posts
 	$items = $feed->get_items(0, $options[1]);
 	
-	// Specify the date format
-
+	// Block Data 
+    $blockFeeds = array(0 => _MB_READER_ALL_FEEDS) + $reader_feed_handler->getList($criteria); //$options[0]; 
+    $block['feed'] = $blockFeeds[$options[0]];
+	
 	// Assign to array
 	foreach ($items as $item)
 	{
@@ -68,6 +70,7 @@ function reader_feed_recent_posts_show($options)
 		$itemArray['title'] = $item->get_title();
 		$itemArray['link'] = $item->get_link();
 		$itemArray['date'] = $item->get_date(icms_getConfig('date_format', $readerModule->getVar("dirname")));
+		$itemArray['description'] = $item->get_description(); // Mr Theme
 		$block['reader_recent_posts'][] = $itemArray;
 	}
 	

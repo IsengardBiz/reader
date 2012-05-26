@@ -20,3 +20,8 @@ Version 1.02
 - Pull feed titles from database in preference to cache to allow customisation.
 - Add preference to toggle feed descriptions on and off.
 - Adjust heading levels in single feed view.
+
+Version 1.03
+============
+- Released 26/5/2012
+- Add feed title to feed_recent_posts block (Will).
