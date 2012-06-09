@@ -25,3 +25,9 @@ Version 1.03
 ============
 - Released 26/5/2012
 - Add feed title to feed_recent_posts block (Will).
+
+Version 1.04
+============
+- Released 9/6/2012
+- Fix slow index page load when gzip enabled on ICMS 1.3.2
+- Improve CSS (remove clear) to prevent content being pushed down by floated divs.
