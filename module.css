@@ -3,8 +3,9 @@
 .reader_breadcrumb {font-size: 0.8em; line-height: 18px;}
 .reader_adminlinks {padding-top: 15px; padding-bottom: 5px; font-size: 0.8em; text-align: center; line-height: 18px;}
 
+/* Prevents feed being pushed down by floated content */
 .reader_feed_container {
-	clear:both;
+	overflow:auto;
 }
 
 /* Spaces sections of the page*/

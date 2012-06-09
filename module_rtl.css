@@ -4,7 +4,7 @@
 .reader_adminlinks {padding-top: 15px; padding-bottom: 5px; font-size: 0.8em; text-align: center; line-height: 18px;}
 
 .reader_feed_container {
-	clear:both;
+	overflow:auto;
 }
 
 /* Spaces sections of the page*/
@@ -25,4 +25,9 @@
 	float:right;
 	clear:both;
 	margin:0em 0em 1em 1em;
+}
+
+/* Ensure an element does not overlap an image */
+.reader_clear_both {
+	clear:both;
 }
