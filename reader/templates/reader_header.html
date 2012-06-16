@@ -1,0 +1,12 @@
+<{if $reader_show_breadcrumb}>
+	<div class="reader_headertable">
+		<{if $reader_module_home}>
+		<span class="reader_modulename"><{$reader_module_home}></span>
+		<{/if}>
+		<{if $reader_category_path}>
+		<span class="reader_breadcrumb"><{if $reader_module_home}>&gt;<{/if}><{$reader_category_path}></span>
+		<{/if}>
+	</div>
+<{else}>
+	<h1><{$smarty.const._CO_READER_NEWSFEEDS}></h1>
+<{/if}>
