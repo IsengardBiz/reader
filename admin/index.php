@@ -12,5 +12,5 @@
  * @version		$Id$
  */
 
-include 'feed.php';
+header('location: feed.php');
 exit;
