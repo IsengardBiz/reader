@@ -59,7 +59,7 @@ class mod_reader_FeedHandler extends icms_ipf_Handler {
 		$readerModule = icms_getModuleInfo("reader");
 		
 		// Make sure SimplePie is included.
-		require_once(ICMS_ROOT_PATH . '/libraries/simplepie/simplepie.inc');
+		require_once(ICMS_ROOT_PATH . '/libraries/simplepie/autoloader.php');
 
 		// We'll process this feed with all of the default options.
 		$feed = new SimplePie();

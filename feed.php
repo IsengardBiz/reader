@@ -16,7 +16,7 @@ $xoopsOption["template_main"] = "reader_feed.html";
 include_once ICMS_ROOT_PATH . "/header.php";
 
 // Include the Simplepie library
-require_once(ICMS_ROOT_PATH . '/libraries/simplepie/simplepie.inc');
+require_once(ICMS_ROOT_PATH . '/libraries/simplepie/autoloader.php');
 
 $reader_feed_handler = icms_getModuleHandler("feed", basename(dirname(__FILE__)), "reader");
 
@@ -66,8 +66,10 @@ if($feedObj && !$feedObj->isNew()) {
 	$feed->enable_cache(icms::$module->config['enable_cache']);
 	$feed->set_cache_duration(icms::$module->config['cache_duration']);
 	$feed->set_cache_location(ICMS_ROOT_PATH . '/cache');
+	
 	// Add images to the default list of html tags to strip
 	$feed->strip_htmltags(array('img'));
+	
 	// You can review the default list via the *property* $feed->strip_htmltags
 	$feed->strip_comments(TRUE);
 
@@ -110,7 +112,7 @@ if($feedObj && !$feedObj->isNew()) {
 		$feedArray['image_title'] = $feed->get_image_title();
 		$feedArray['permalink'] = urldecode($feed->get_permalink());
 		$feedArray['image_width'] = icms::$module->config['image_width'];
-		$feedArray['subscribe_feed'] = urldecode($feed->subscribe_feed());
+		$feedArray['subscribe_feed'] = 'feed:' . urldecode($feed->subscribe_url());
 		$feedArray['items'] = array();
 		$items = $feed->get_items(0, $feedObj->getVar('item_limit', 'e'));
 		foreach ($items as $item) {
@@ -246,7 +248,7 @@ if($feedObj && !$feedObj->isNew()) {
 			}
 			$myfeed['image_title'] = $feed->get_image_title();
 			$myfeed['image_width'] = icms::$module->config['image_width'];
-			$myfeed['subscribe_feed'] = urldecode($feed->subscribe_feed());
+			$myfeed['subscribe_feed'] = 'feed:' . urldecode($feed->subscribe_url());
 			unset($feed, $author, $item);		
 		}
 	}
