@@ -1,0 +1,8 @@
+How to install Reader
+=====================
+
+There are two things you need to do:
+
+1. Ensure that your site has the Simplepie library V 1.2.1 or higher installed. If you have an older version, download it from http://simplepie.org/downloads/ and put it in your /libraries folder. If you don't update Simplepie, you will find that feed URLs containing query parameters fail.
+
+2. Proceed to install Reader as a regular ImpressCMS module, which means you should copy the complete /reader folder into the /modules directory of your website. Then, log in to your site as administrator, go to System Admin > Modules, look for the Reader icon in the list of uninstalled modules and click in the install icon. Follow the directions in the screen and you'll be ready to go.

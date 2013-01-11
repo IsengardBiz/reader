@@ -1,0 +1,40 @@
+Version 1.0
+===========
+- Released 6/2/2012, for ImpressCMS V1.3.x and V2. Not compatible with V1.2.x.
+
+Version 1.01
+============
+- Miscellaneous minor bugfixes.
+
+Version 1.02
+============
+
+- Released 25/5/2012
+- Pull feed titles from database in preference to cache to allow customisation.
+- Add preference to toggle feed descriptions on and off.
+- Adjust heading levels in single feed view.
+
+Version 1.03
+============
+- Released 26/5/2012
+- Add feed title to feed_recent_posts block (Will).
+
+Version 1.04
+============
+- Released 9/6/2012
+- Fix slow index page load when gzip enabled on ICMS 1.3.2
+- Improve CSS (remove clear) to prevent content being pushed down by floated divs.
+
+Version 1.05
+============
+- Released 16/6/2012
+- Revert to use of theme changer block bugfix.
+- This is last version compatible with ImpressCMS 1.3.1 to 1.3.3.
+
+Version 1.06
+============
+- Released 11/1/2013
+- Modified to use the updated SimplePie library shipped with ImpressCMS 1.3.4.
+- Changed feed subscription links (feed: ...) to regular RSS url.
+- Updated the manual.
+- Requires ImpressCMS 1.3.4 or higher.
