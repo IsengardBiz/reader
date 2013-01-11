@@ -112,7 +112,7 @@ if($feedObj && !$feedObj->isNew()) {
 		$feedArray['image_title'] = $feed->get_image_title();
 		$feedArray['permalink'] = urldecode($feed->get_permalink());
 		$feedArray['image_width'] = icms::$module->config['image_width'];
-		$feedArray['subscribe_feed'] = 'feed:' . urldecode($feed->subscribe_url());
+		$feedArray['subscribe_feed'] = urldecode($feed->subscribe_url());
 		$feedArray['items'] = array();
 		$items = $feed->get_items(0, $feedObj->getVar('item_limit', 'e'));
 		foreach ($items as $item) {
@@ -248,7 +248,7 @@ if($feedObj && !$feedObj->isNew()) {
 			}
 			$myfeed['image_title'] = $feed->get_image_title();
 			$myfeed['image_width'] = icms::$module->config['image_width'];
-			$myfeed['subscribe_feed'] = 'feed:' . urldecode($feed->subscribe_url());
+			$myfeed['subscribe_feed'] = urldecode($feed->subscribe_url());
 			unset($feed, $author, $item);		
 		}
 	}
