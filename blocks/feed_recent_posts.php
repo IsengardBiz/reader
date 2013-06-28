@@ -17,7 +17,7 @@ function reader_feed_recent_posts_show($options)
 {	
 	$readerModule = icms_getModuleInfo("reader");
 	include_once(ICMS_ROOT_PATH . '/modules/' . $readerModule->getVar("dirname") . '/include/common.php');
-	require_once(ICMS_ROOT_PATH . '/libraries/simplepie/simplepie.inc');
+	require_once(ICMS_ROOT_PATH . '/libraries/simplepie/autoloader.php');
 	$block = $feedObjArray = $feedUrls = array();
 	$reader_feed_handler = icms_getModuleHandler("feed", $readerModule->getVar("dirname"), "reader");
 	
